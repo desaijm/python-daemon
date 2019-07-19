@@ -40,6 +40,14 @@ CMD [ "python", "./main.py" ]
 docker build -t pydaemon:dev2 .
 ```
 
+#### Expected logs locally
+```
+mypass = secretfromwindows
+mongoConnectionString = connectionStringFromWindows
+Hello 2019-07-19 08:23:30.835177
+Hello 2019-07-19 08:23:50.835859
+```
+
 ### 2. Deploy image to kubernetes cluster
 
 #### Deploy yaml file
@@ -70,10 +78,10 @@ spec:
 kubectl apply -f deploy.yaml
 ```
 
-### Expected logs
+#### Expected logs in kumbernetes
 ```
-mypass = secretfromwindows
-mongoConnectionString = connectionStringFromWindows
+mypass = topsecret
+mongoConnectionString = mongodb://mongo-ms-md:27017
 Hello 2019-07-19 08:23:30.835177
 Hello 2019-07-19 08:23:50.835859
 ```
