@@ -78,7 +78,7 @@ spec:
 kubectl apply -f deploy.yaml
 ```
 
-#### Expected logs in kumbernetes
+#### Expected logs in kubernetes
 ```
 mypass = topsecret
 mongoConnectionString = mongodb://mongo-ms-md:27017
