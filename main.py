@@ -4,8 +4,8 @@ import os
 def process():
     print(f"Hello {datetime.datetime.now()}", flush=True)
 
-print(os.getenv('mypass', None))
-print(os.getenv('mongoConnectionString', None))
+print("mypass = " + os.getenv('mypass', "notfound"))
+print("mongoConnectionString = " + os.getenv('mongoConnectionString', "notfound"))
 
 while True:
     process()
