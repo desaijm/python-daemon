@@ -72,6 +72,8 @@ kubectl apply -f deploy.yaml
 
 ### Expected logs
 ```
-mypass = secretfromwindows                                                                                                                 mongoConnectionString = connectionStringFromWindows                                                                                        Hello 2019-07-19 08:23:30.835177
-Hello 2019-07-19 08:23:50.835859 
+mypass = secretfromwindows
+mongoConnectionString = connectionStringFromWindows
+Hello 2019-07-19 08:23:30.835177
+Hello 2019-07-19 08:23:50.835859
 ```
