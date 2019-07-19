@@ -1,0 +1,20 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: py-daemon
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: py-daemo
+    spec:
+      containers:
+      - name: py-daemo
+        image: pydaemon:dev2
+        imagePullPolicy: Never
+        env:
+        - name: mypass
+          value: topsecret
+        - name: mongoConnectionString
+          value: mongodb://mongo-ms-md:27017
